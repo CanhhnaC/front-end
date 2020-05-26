@@ -1,0 +1,212 @@
+body {
+    color: #4c4c4c;
+    background-color: #232323;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Top Bar */
+.topBar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #4c4c4c;
+}
+
+.topBar>*>input {
+    background-color: #232323;
+    border: 1px solid #4c4c4c;
+    color: #4c4c4c;
+    padding: 5px;
+}
+
+.topBar>*>a {
+    text-decoration: none;
+    padding: 5px;
+    background-color: #3a3a3a;
+    color: #000000;
+    border: 1px solid #363636;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+.header>.left>span {
+    color: #ffffff;
+    font-size: 36pt;
+}
+
+.header>.left>p {
+    font-size: 16pt;
+    margin-top: 20px;
+}
+
+.header>.right>img {
+    border: 1px solid #4f4f4f;
+}
+
+/* Top Navi */
+.topNavi {
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    margin-bottom: 15px;
+}
+
+.topNavi>a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    background-color: #000000;
+    white-space: nowrap;
+}
+
+/* Cu3er */
+.Cu3er {
+    position: relative;
+}
+
+.Cu3er > img {
+    margin-left: 20px;
+    border-radius: 15px;
+    border: 15px solid #3a3b3f;
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 20px;
+    left: 15%;
+    z-index: 10;
+    padding: 20px;
+    color: #fff;
+    background-color: #292929;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+/* Intro */
+.intro {
+    margin-top: 20px;
+    border-top: 1px solid #4c4c4c;
+    padding: 25px 0;
+}
+
+.intro > p {
+    font-size: 26pt;
+    padding-bottom: 25px;
+}
+
+.gird-container {
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+}
+
+.intro > .gird-container > .grid-item > img {
+    border: 1px solid #4f4f4f;
+    margin-bottom: 20px;
+}
+
+.intro > .gird-container > .grid-item > a {
+    text-decoration: none;
+    color: #f35425;
+    background-color: #1e1e1e;
+    padding: 10px 25px;
+}
+
+/* Content */
+.content {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 30px;
+}
+
+.content > .grid-item > span {
+    font-size: 18pt;
+    padding: 15px 0;
+}
+
+.content > .grid-item > img {
+    border-top: 1px solid #383838;
+    padding: 15px 0;
+}
+
+.content > .grid-item > p {
+    padding-bottom: 20px;
+    font-size: 12pt;
+    color: #98989a;
+}
+
+
+.content > .grid-item > a {
+    text-decoration: none;
+    color: #f35425;
+    background-color: #1e1e1e;
+    padding: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: #2d2d2f;
+    display: grid;
+    grid-template-columns: 320px repeat(3, auto);
+    column-gap: 30px;
+    padding: 30px 20px;
+    color: #98989a;
+}
+
+.footer > .grid-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer > .grid-item > span {
+font-size: 20pt;
+padding-bottom: 20px;
+border-bottom: 1px solid #636364;
+}
+
+.footer > .grid-item > .text {
+    padding-top: 10px;
+}
+
+.footer > .grid-item > .text > p{
+    padding-bottom: 10px;
+}
+
+.footer > .grid-item > .text > .input > a {
+    padding: 5px;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+}
+
+.footer > .grid-item > .text > .input > input {
+    padding: 5px;
+}
+
+.footer > .grid-item > a{
+    padding-top: 5px;
+    text-decoration: none;
+    color: #f35425;
+}
+
+/* Copyright */
+.Copyright {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    padding: 20px;
+}

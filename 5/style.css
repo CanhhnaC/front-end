@@ -1,0 +1,244 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+/* Header */
+header {
+    border-top: 5px solid #76c38f;
+    background-color: #290000;
+    color: #ffffff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+
+.header>.right>a {
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 10px 10px;
+}
+
+.header>.right>a:hover {
+    background-color: #76c38f;
+}
+
+/* Slider */
+.slider {
+    display: flex;
+    padding-bottom: 50px;
+    justify-content: space-between;
+}
+
+.slider>a {
+    align-self: center;
+}
+
+.slider>.left {
+    align-self: center;
+}
+
+.slider>.left>a {
+    color: white;
+    text-decoration: none;
+    background-color: #76c38f;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+/* Services */
+.services {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    padding-bottom: 40px;
+    column-gap: 20px;
+}
+
+.services>.grid-item {
+    position: static;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.services>.grid-item:hover {
+    background-color: #76c38f;
+    color: white;
+}
+
+.services>.grid-item>div {
+    align-self: center;
+    padding-bottom: 20px;
+}
+
+.services>.grid-item>span {
+    font-size: 32pt;
+    text-align: center;
+    padding-bottom: 15px;
+    display: inline-block;
+}
+
+/* Latest Work */
+.latest-work>.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 30px;
+    column-gap: 30px;
+}
+
+.latest-work>.grid-container>.grid-item{
+    position: relative;
+}
+
+.carousel-caption{
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    color: white;
+    background-color: #151515;
+    font-size: 14pt;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.latest-work>.grid-container>.grid-item>.text {
+    display: inline-block;
+    color: white;
+}
+
+
+.latest-work>.grid-container>.grid-item {
+    border: 5px solid #ffffff;
+}
+
+.latest-work>.grid-container>.grid-item:hover {
+    border: 5px solid #76c38f;
+}
+
+.latest-work>.grid-container>.grid-item:hover .carousel-caption{
+    opacity: 0;
+}
+
+/* Line */
+.latest-work>.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.latest-work>.header>.line {
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.latest-work>.header::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    border-top: 3px solid #303030;
+    background-color: #303030;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.latest-work>.header>.line>p {
+    display: inline-block;
+    border-radius: 10px;
+    background-color: #303030;
+    padding: 10px 25px;
+    color: #ffffff;
+}
+
+/* Footer */
+footer>.footer {
+    padding: 40px 0;
+    color: #979797;
+    display: grid;
+    grid-template-columns: auto auto auto 225px;
+    column-gap: 20px;
+}
+
+.footer>div>span {
+    font-size: 16pt;
+    color: #ffffff;
+    padding-bottom: 30px;
+
+}
+
+.footer>div>p {
+    margin-bottom: 10px;
+}
+
+.footer>div>a {
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #76c38f;
+}
+
+.footer>.grid-item-2>ul>li>a {
+    text-decoration: none;
+    color: #76c38f;
+}
+
+.footer>.grid-item-2>ul>li {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid #404040;
+}
+
+.footer>.grid-item-3>p >span {
+    color: #76c38f;
+}
+
+.grid-item-4 > .input  {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.grid-item-4 > .input > input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #222222;
+    color: #989898;
+
+}
+
+.grid-item-4 > a {
+    background-color: #76c38f;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+/* Copyright */
+.Copyright {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    color: #979797;
+    border-top: 1px solid #3a3a3a;
+}
