@@ -7,7 +7,6 @@
 
 /* Header */
 header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    border-top: 5px solid #7e5c88;
+    background-color: blanchedalmond;
 }
