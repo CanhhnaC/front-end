@@ -1,5 +1,4 @@
 .container {
-    max-width: 1200px;
     margin: 0 auto;
     padding-left: 120px;
     padding-right: 120px;
@@ -7,6 +6,8 @@
 
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
+    max-width: 1200px;
+    margin: auto;
 }
 
 
@@ -61,6 +62,7 @@ header {
 /* Services */
 .services {
     display: grid;
+    box-sizing: content-box;
     grid-template-columns: repeat(4, auto);
     padding-bottom: 40px;
     column-gap: 20px;
@@ -96,16 +98,16 @@ header {
 /* Latest Work */
 .latest-work>.grid-container {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 300px 300px 300px;
     row-gap: 30px;
     column-gap: 30px;
 }
 
-.latest-work>.grid-container>.grid-item{
+.latest-work>.grid-container>.grid-item {
     position: relative;
 }
 
-.carousel-caption{
+.carousel-caption {
     position: absolute;
     z-index: 10;
     right: 0;
@@ -133,7 +135,7 @@ header {
     border: 5px solid #76c38f;
 }
 
-.latest-work>.grid-container>.grid-item:hover .carousel-caption{
+.latest-work>.grid-container>.grid-item:hover .carousel-caption {
     opacity: 0;
 }
 
@@ -207,26 +209,27 @@ footer>.footer {
     border-bottom: 1px solid #404040;
 }
 
-.footer>.grid-item-3>p >span {
+.footer>.grid-item-3>p>span {
     color: #76c38f;
 }
 
-.grid-item-4 > .input  {
+.grid-item-4>.input {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
 }
 
-.grid-item-4 > .input > input {
+.grid-item-4>.input>input {
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 10px;
     background-color: #222222;
     color: #989898;
+    border: none;
 
 }
 
-.grid-item-4 > a {
+.grid-item-4>a {
     background-color: #76c38f;
     padding: 10px;
     text-decoration: none;

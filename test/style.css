@@ -1,8 +1,4 @@
-.square {
-    width: 200px;
-    height: 200px;
-    background-color: goldenrod;
+.test {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
 }
