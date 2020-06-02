@@ -1,0 +1,48 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    font-family: 16pt 'Open Sans', sans-serif;
+    color: #55606e;
+}
+
+.container {
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+a {
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header,
+footer {
+    background: #15181f url(img/bg-texture.png) repeat;
+    color: #ffffff;
+}
+
+main {
+    background: #ffffff;
+}
+
+.banner {
+    background: #333 url(/img/bg-banner.png) no-repeat 50% 50%;
+    background-size: cover;
+	color: #fff;
+    height: 465px;
+}
