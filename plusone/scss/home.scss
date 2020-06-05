@@ -1,0 +1,114 @@
+@mixin cuz-text($size, $font, $color, $transform) {
+    font-size: $size;
+    font-family: $font;
+    color: $color;
+    text-transform: $transform;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        padding: 30px 0;
+
+        span {
+            margin-left: 10px;
+            text-align: center;
+            @include cuz-text(20px, 'poppins-semibold', #4b4a4e, uppercase)
+        }
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        li {
+            padding: 0 15px;
+
+            .activate {
+                color: #935491;
+
+                &:hover {
+                    color: #935491;
+                }
+            }
+
+            a {
+                @include cuz-text(16px, 'poppins-extralight', #2b2b2b, none);
+
+                &:hover {
+                    color: #CDDBDB;
+                    transition: 0.5s;
+                }
+            }
+
+            .link {
+                color: #ffffff;
+                background-color: #935491;
+                font-size: 14px;
+                padding: 15px 20px;
+
+                &:hover {
+                    background-color: #CDDBDB;
+                    transition: 0.5s;
+                    color: #4B4A4E;
+                }
+            }
+        }
+    }
+}
+
+.content {
+    margin-top: 98px;
+    position: relative;
+    text-align: center;
+
+    .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            @include cuz-text(60px, 'poppins-semibold', #4b4a4e, uppercase)
+        }
+
+        span {
+            @include cuz-text(21px, 'poppins-extralight', #4b4a4e, 'none');
+            margin: 25px 0;
+        }
+
+        div {
+            display: inline-block;
+            margin-top: 30px;
+
+            a {
+                padding: 15px 40px;
+                border: 1px solid #4b4a4e;
+
+                &:hover {
+                    transition: 0.5s ease-out;
+                    background-color: #CDDBDB;
+                    border: 1px solid #CDDBDB;
+                }
+            }
+        }
+    }
+}

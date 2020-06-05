@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'futura-lt-w01-light';
+    src: url('../font/Futura.woff')format('woff');  
+}
+
+@font-face {
+    font-family: 'poppins-extralight';
+    src: url('../font/poppins-extralight.woff');
+}
+
+@font-face {
+    font-family: 'poppins-semibold';
+    src: url('../font/poppins-semibold.woff');
+}
