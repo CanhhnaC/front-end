@@ -179,6 +179,53 @@ header {
 
 }
 
+.location {
+
+    position: relative;
+    
+
+    .text {
+        left: 5%;
+        top: 10%;
+        height: 70%;
+        width: 18%;
+        position: absolute;
+        background-color: #ffffff;
+        display: grid;
+        grid-template-rows: auto;
+        padding: 30px 100px;
+
+        h3 {
+            padding: 30px 0;
+            @include cuz-text(36px, 'poppins-semibold', #4b4a4e, none);
+        }
+
+        span {
+            padding-top: 30px;
+            @include cuz-text(21px, 'poppins-extralight', #4b4a4e, none);
+        }
+
+        p {
+            padding-top: 20px;
+            @include cuz-text(18px, 'futura', #2b2b2b, none)
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 35px;
+            padding: 10px 30px;
+            @include cuz-text(14px, 'poppins-extralight', #4b4a4e, none);
+            border: 1px solid #4b4a4e;
+
+            &:hover {
+                transition: 0.5s;
+                background-color: #ECECEC;
+                border: 1px solid #ECECEC;
+            }
+        }
+    }
+}
+
 
 footer {
     background-color: #E8ECED;
