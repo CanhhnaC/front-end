@@ -33,7 +33,7 @@
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="#" class="activate">
-                    <span ><i class="fas fa-user-circle"></i></span>
+                    <span><i class="fas fa-user-circle"></i></span>
                     <span>Login</span>
                 </a></li>
             <li><a href="#" class="link">
@@ -72,7 +72,7 @@
             <div class="items-wrapper">
                 <img src="../img/book-2.webp" alt="">
                 <div class="text">
-                    <span>Mommy Time</span>
+                    <span>Mon Plus One</span>
                     <hr>
                     <p>Mon, Tue, Wed, Thu, Fri</p>
                     <p>1 hr</p>
@@ -83,7 +83,7 @@
             <div class="items-wrapper">
                 <img src="../img/book-3.webp" alt="">
                 <div class="text">
-                    <span>Mommy Time</span>
+                    <span>Mom to Be</span>
                     <hr>
                     <p>Mon, Tue, Wed, Thu, Fri</p>
                     <p>1 hr</p>
@@ -96,11 +96,14 @@
 
     <main class="container">
 
+        <!-- Location -->
+
         <div class="location">
 
             <img src="../img/our-location.webp" alt="">
 
             <div class="text">
+
                 <h3>Our Locations</h3>
                 <span>San Francisco</span>
                 <p>I'm a paragraph. Click here to add your own text and edit me.</p>
@@ -112,6 +115,7 @@
                 <p>I'm a paragraph. Click here to add your own text and edit me.</p>
 
                 <a href="#">Join Now</a>
+
             </div>
 
         </div>
@@ -127,16 +131,17 @@
 
         <div class="mommies-say">
             <div class="text">
-                <h4>What Our Mommies Say</h4>
+                <div class="label">
+                    <p>What Our</p>
+                    <p>Mommies Say</p>
+                </div>
                 <div class="comment">
                     <p>“I'm a testimonial. Click to edit me and add text that says something nice about you and your
                         services.” </p>
                     <p>Dana Lemon </p>
                 </div>
             </div>
-            <div class="img">
-                <img src="../img/mommies-say.webp" alt="">
-            </div>
+            <img src="../img/mommies-say.webp" alt="">
         </div>
 
         <div class="watch-us">
@@ -166,19 +171,22 @@
                 <div class="left">
                     <span>Book on the Go with the Wix Mobile App</span>
                     <p>The app lets your clients book services, get notifications & stay engaged with your business</p>
-                    <div>
-                        <input type="text" placeholder="+84">
-                        <input type="text" placeholder="Phone Number">
+                    <div class="input">
+                        <input type="text" placeholder="+84" style="padding: 0 12px; height: 40px; flex-shrink: 0;">
+                        <input type="text" placeholder="Phone Number" style="flex-grow: 1;">
                         <a href="">Send</a>
                     </div>
-                    <a href="#"> <img src="../img/icon-google.png" alt=""> </a>
-                    <a href="#"> <img src="../img/icon-apple.png" alt=""> </a>
+                    <div class="icon">
+                        <a href="#"> <img src="../img/icon-google.png" alt=""> </a>
+                        <a href="#"> <img src="../img/icon-apple.png" alt=""> </a>
+                    </div>
                 </div>
 
                 <div class="right">
-                    <input type="text">
-                    <input type="text">
-                    <input type="text">
+                    <input type="text" placeholder="Full Name" autocomplete="none">
+                    <input type="text" placeholder="Email" autocomplete="none">
+                    <input type="text" placeholder="Type your message here..."
+                        style=" padding: 12px 10px 3px 12px; height: 120px" autocomplete="none">
                     <a href="">Send</a>
                 </div>
             </div>
@@ -189,7 +197,7 @@
 
     <footer class="container">
         <div class="left">
-            <span> Subscribe to Our Newsletter            </span>
+            <span> Subscribe to Our Newsletter </span>
             <input type="text" placeholder="Email*">
             <a href="#">Subscribe Now</a>
         </div>
