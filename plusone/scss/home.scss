@@ -6,7 +6,10 @@
 }
 
 @mixin filter-img($color, $opacity) {
-    & {position: relative;};
+    & {
+        position: relative;
+    }
+
     &::before {
         content: "";
         display: block;
@@ -20,6 +23,18 @@
         background: $color;
     }
 
+}
+
+@mixin create-link($padding, $size-border, $bg-border, $bg-hover, $text-hover) {
+    padding: $padding;
+    border: $size-border solid $bg-border;
+
+    &:hover {
+        transition: 0.5s;
+        background-color: $bg-hover;
+        border: $size-border solid $bg-hover;
+        color: $text-hover;
+    }
 }
 
 a {
@@ -82,14 +97,9 @@ header {
             .link {
                 color: #ffffff;
                 background-color: #935491;
-                font-size: 14px;
-                padding: 15px 20px;
 
-                &:hover {
-                    background-color: #CDDBDB;
-                    transition: 0.5s;
-                    color: #4B4A4E;
-                }
+                @include cuz-text(14px, 'poppins-extralight', #ffffff, none);
+                @include create-link(15px 20px, 0, none, #CDDBDB, #000000);
             }
         }
     }
@@ -123,15 +133,8 @@ header {
             margin-top: 30px;
 
             a {
-                padding: 15px 40px;
-                border: 1px solid #000000;
                 @include cuz-text(14px, 'poppins-extralight', #4b4a4e, none);
-
-                &:hover {
-                    transition: 0.5s ease-out;
-                    background-color: #CDDBDB;
-                    border: 1px solid #CDDBDB;
-                }
+                @include create-link(15px 40px, 1px, #000000, #CDDBDB, #000000);
             }
         }
     }
@@ -183,9 +186,9 @@ header {
                 }
 
                 a {
-                    @include cuz-text(16px, 'futura', #ffffff, none);
                     background-color: #935491;
-                    padding: 8px 30px;
+                    @include cuz-text(16px, 'futura', #ffffff, none);
+                    @include create-link(8px 30px, 0, none, #935491c7, #ffffff);
                 }
             }
         }
@@ -236,23 +239,15 @@ header {
         a {
             display: inline-block;
             margin-top: 35px;
-            padding: 10px 30px;
             @include cuz-text(14px, 'poppins-extralight', #4b4a4e, none);
-            border: 1px solid #4b4a4e;
-
-            &:hover {
-                transition: 0.5s;
-                background-color: #ECECEC;
-                border: 1px solid #ECECEC;
-            }
+            @include create-link(10px 30px, 1px, #4b4a4e, #ECECEC, #4b4a4e);
         }
     }
 }
 
 .story {
-    padding: 130px 500px;
+    padding: 100px calc((100% - 700px) * 0.5);
     text-align: center;
-
 
     h3 {
         @include cuz-text(36px, 'poppins-semibold', #4b4a4e, none)
@@ -264,9 +259,8 @@ header {
     }
 
     a {
-        padding: 10px 30px;
-        border: 1px solid #000000;
-
+        @include cuz-text(14px, 'poppins-extralight', #4b4a4e, none);
+        @include create-link(10px 30px, 1px, #4B4A4E, #959595, #000000);
     }
 }
 
