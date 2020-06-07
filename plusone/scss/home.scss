@@ -5,6 +5,22 @@
     text-transform: $transform;
 }
 
+@mixin filter-img($color, $opacity) {
+    & {position: relative;};
+    &::before {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        pointer-events: none;
+        opacity: $opacity;
+        background: $color;
+    }
+
+}
 
 a {
     text-decoration: none;
@@ -272,6 +288,7 @@ header {
             justify-self: start;
             margin: 171px 0px 9px calc((100% - 393px) * 0.5);
             left: 44px;
+
             p {
                 line-height: normal;
                 @include cuz-text(36px, 'poppins-semibold', #4b4a4e, none)
@@ -297,18 +314,14 @@ header {
 }
 
 .watch-us {
-    position: static;
-    display: grid;
-    height: auto;
-    width: 100%;
-    min-height: auto;
-    grid-template-rows: min-content min-content min-content 1fr;
-    grid-template-columns: 100%;
+
 
     .text {
-        padding: 100px 0;
+        padding: 100px calc((100% - 700px) * 0.5);
+        text-align: center;
 
         h3 {
+            padding-bottom: 30px;
             @include cuz-text(36px, 'poppins-semibold', #4b4a4e, none);
         }
 
@@ -321,6 +334,7 @@ header {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         column-gap: 10px;
+
     }
 }
 
