@@ -37,8 +37,16 @@
     }
 }
 
+body{  scroll-behavior: smooth;
+}
+
 a {
     text-decoration: none;
+}
+
+input {
+    border-radius: 0;
+    border: 1px solid #000000;
 }
 
 .container {
@@ -325,10 +333,15 @@ header {
     }
 
     .img {
+
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         column-gap: 10px;
-
+        
+        img {
+            cursor: pointer;
+            @include filter-img(#000000, 0.8);
+        }
     }
 }
 
@@ -347,9 +360,7 @@ header {
 
 
         .left {
-
-            width: 980px;
-            flex-shrink: 1;
+            width: 330px;
 
             span {
                 @include cuz-text(32px, 'poppins-semibold', #4b4a4e, none);
@@ -362,13 +373,26 @@ header {
 
             .input {
                 display: flex;
+                min-width: 330px;
+                justify-content: flex-start;
+                margin-top: 32px;
 
                 input {
-                    margin-right: 10px;
+                    margin-right: 8px;
+                    margin-left: 8px;
                 }
 
                 a {
                     text-align: center;
+                    border: 1px solid black;
+                    padding: 0 20px;
+                    width: 91px;
+                    height: 40px;
+
+                    &:hover {
+                        background-color: #a0c0c3;
+                        transition: .5s ease-in-out;
+                    }
                 }
             }
 
@@ -379,24 +403,31 @@ header {
         }
 
         .right {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            width: 540px;
+            display: grid;
+            grid-template-rows: min-content min-content min-content 1fr;
+            grid-template-columns: 100%;
+            height: 100%;
+
 
             input {
-                width: 500px;
-                padding: 3px 3px 3px 12px;
+                width: 510px;
+                height: 41px;
+                margin-bottom: 15px;
             }
 
-            a {
-                align-self: flex-end;
-                padding: 10px 60px;
-                @include cuz-text(16px, 'futura', #2b2b2b, none);
-                background-color: #cddbdb;
+            div {
+                text-align: center;
+                height: 38px;
+                min-height: 22px;
+                width: 149px;
+                justify-self: end;
+                align-self: end;
 
-                &:hover {
-                    background-color: #A0C0C3;
-                    transition: 0.5s;
+                a {
+                    background-color: #cddbdb;
+                    @include cuz-text(16px, 'futura', #2b2b2b, none);
+                    @include create-link(5px 30px, 0, none, #a0c0c3, #4B4A4E);
                 }
             }
         }
