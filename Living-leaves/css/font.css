@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'avenir';
+    src: url('../font/avenir.woff2')format('woff2');
+}
+
+@font-face {
+    font-family: 'libre';
+    src: url('../font/libre.woff2')format('woff2');
+}
