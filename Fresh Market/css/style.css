@@ -1,0 +1,141 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  background-color: #FBF9F1;
+}
+
+.container {
+  padding-left: 90px;
+  padding-right: 90px;
+  margin: 0 auto;
+  max-width: 1110px;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: #FBF9F1;
+  padding: 45px 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .logo span {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding-left: 20px;
+  text-transform: none;
+  color: #2A6049;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav ul li {
+  padding: 0 15px;
+}
+
+header nav ul li a {
+  text-transform: none;
+  color: #191919;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+header nav ul li a.activate, header nav ul li a:hover {
+  color: #479e79;
+}
+
+#banner {
+  margin-top: 131px;
+  position: relative;
+}
+
+#banner .photo img {
+  width: 100%;
+}
+
+#banner .text {
+  position: absolute;
+  top: 145px;
+  left: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 400px;
+}
+
+#banner .text span {
+  text-transform: uppercase;
+  color: #2A6049;
+  font-size: 50px;
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+
+#banner .text p {
+  padding-bottom: 30px;
+  text-transform: uppercase;
+  color: #2A6049;
+  font-size: 50px;
+  font-weight: lighter;
+}
+/*# sourceMappingURL=style.css.map */

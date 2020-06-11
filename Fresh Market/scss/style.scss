@@ -1,0 +1,110 @@
+$text-color: #2A6049;
+$bg-color: #FBF9F1;
+
+@mixin cuz-text($size, $weight, $color, $trans) {
+    text-transform: $trans;
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: $bg-color;
+}
+
+.container {
+    padding-left: 90px;
+    padding-right: 90px;
+    margin: 0 auto;
+    max-width: 1110px;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: $bg-color;
+    padding: 45px 0;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+        display: flex;
+
+        span {
+            align-self: flex-end;
+            padding-left: 20px;
+            @include cuz-text(25px, bold, $text-color, none)
+        }
+    }
+
+    nav ul {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+        li {
+            padding: 0 15px;
+
+            a {
+                @include cuz-text(15px, lighter, #191919, none);
+
+                &.activate,
+                &:hover {
+                    color: #479e79;
+                }
+            }
+        }
+    }
+}
+#banner {
+    margin-top: 131px;
+    position: relative;
+
+
+    .photo img{
+        width: 100%;
+    }
+
+    .text {
+        position: absolute;
+        top: 145px;
+        left: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 400px;
+
+        span {
+            @include cuz-text(50px, bold, $text-color, uppercase);
+            padding-bottom: 30px;
+        }
+        p {
+            padding-bottom: 30px;
+            @include cuz-text(50px, lighter, $text-color, uppercase);
+        }
+    }
+}
