@@ -98,8 +98,10 @@ header nav ul li a.activate, header nav ul li a:hover {
 }
 
 #banner {
-  margin-top: 131px;
   position: relative;
+  max-width: 1110px;
+  margin: 0 auto;
+  margin-top: 131px;
 }
 
 #banner .photo img {
@@ -108,8 +110,8 @@ header nav ul li a.activate, header nav ul li a:hover {
 
 #banner .text {
   position: absolute;
-  top: 145px;
-  left: 80px;
+  top: 20%;
+  left: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -121,6 +123,7 @@ header nav ul li a.activate, header nav ul li a:hover {
       -ms-flex-pack: justify;
           justify-content: space-between;
   max-width: 400px;
+  width: 100%;
 }
 
 #banner .text span {
@@ -128,11 +131,10 @@ header nav ul li a.activate, header nav ul li a:hover {
   color: #2A6049;
   font-size: 50px;
   font-weight: bold;
-  padding-bottom: 30px;
+  padding-bottom: 25px;
 }
 
 #banner .text p {
-  padding-bottom: 30px;
   text-transform: uppercase;
   color: #2A6049;
   font-size: 50px;

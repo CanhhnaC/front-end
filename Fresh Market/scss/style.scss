@@ -45,11 +45,12 @@ header {
     top: 0;
     width: 100%;
     z-index: 10;
-    
+
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+
     .logo {
         display: flex;
 
@@ -80,30 +81,33 @@ header {
         }
     }
 }
+
 #banner {
-    margin-top: 131px;
     position: relative;
+    max-width: 1110px;
+    margin: 0 auto;
+    margin-top: 131px;
 
-
-    .photo img{
+    .photo img {
         width: 100%;
     }
 
     .text {
         position: absolute;
-        top: 145px;
-        left: 80px;
+        top: 20%;
+        left: 10%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         max-width: 400px;
+        width: 100%;
 
         span {
             @include cuz-text(50px, bold, $text-color, uppercase);
-            padding-bottom: 30px;
+            padding-bottom: 25px;
         }
+
         p {
-            padding-bottom: 30px;
             @include cuz-text(50px, lighter, $text-color, uppercase);
         }
     }
