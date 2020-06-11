@@ -1,0 +1,106 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: #ab623f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 15px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .logo img {
+  width: 45px;
+  height: 45px;
+}
+
+header .logo span {
+  font-size: 18px;
+  font-family: "libre";
+  color: #FFFFFF;
+}
+
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header ul a {
+  font-size: 17px;
+  font-family: "avenir";
+  color: #FFFFFF;
+  padding: 0 15px;
+}
+
+header ul a:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header ul a:last-child i {
+  margin: 0 11px;
+  font-size: 27px;
+}
+
+header ul .activate {
+  color: #000000;
+}
+
+main article:nth-child(1) {
+  text-align: center;
+  padding: 84px 0;
+  font-size: 80px;
+  font-family: "libre";
+  color: #FFFFFF;
+  background: url("../img/banner.webp") no-repeat;
+  background-color: #ab623f;
+  background-position: center;
+  background-size: cover;
+}
+
+main article:nth-child(1) p {
+  font-size: 25px;
+  padding-top: 30px;
+}
+/*# sourceMappingURL=style.css.map */

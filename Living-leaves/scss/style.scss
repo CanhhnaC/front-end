@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+@mixin cuz-text($size, $font, $color) {
+    font-size: $size;
+    font-family: $font;
+    color: $color;
+}
+
+
+header {
+    background-color: #ab623f;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    align-items: center;
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 45px;
+            height: 45px;
+        }
+
+        span {
+            @include cuz-text(18px, 'libre', #FFFFFF);
+        }
+    }
+
+    ul {
+        display: flex;
+        flex: 0 1 auto;
+        align-items: center;
+
+        a {
+            @include cuz-text(17px, 'avenir', #FFFFFF);
+            padding: 0 15px;
+
+            &:last-child {
+                display: flex;
+                align-items: center;
+
+                i {
+                    margin: 0 11px;
+                    font-size: 27px;
+                }
+            }
+        }
+
+        .activate {
+            color: #000000;
+        }
+
+    }
+
+}
+
+main {
+
+
+    article:nth-child(1) {
+        text-align: center;
+        padding: 84px 0;
+        @include cuz-text(80px, 'libre', #FFFFFF);
+
+        background: url('../img/banner.webp') no-repeat;
+        background-color: #ab623f;
+        background-position: center;
+        background-size: cover;
+
+        p {
+            font-size: 25px;
+            padding-top: 30px;
+        }
+
+    }
+
+}
