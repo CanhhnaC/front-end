@@ -134,14 +134,16 @@ header {
 
 #services {
     background-color: #50C6C6;
-    padding: 50px 0;
+    padding: 51px 0;
 
     ul {
         max-width: 1140px;
         margin: 0 auto;
         display: flex;
-        flex-direction: row;
+        flex-flow: row wrap;
         justify-content: space-between;
+        align-items: center;
+        flex: 0 1 auto;
 
         li {
             display: flex;
@@ -154,7 +156,6 @@ header {
                 font-size: 75px;
                 color: #FFFFFF;
                 text-align: center;
-                margin-bottom: 30px;
                 border: 1px solid #287B7B;
 
                 &::before {
@@ -191,7 +192,7 @@ header {
 }
 
 #home-page {
-    background-image: linear-gradient(rgba(0,0,0,0.5)),url('../img/background.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url('../img/background.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -214,11 +215,6 @@ header {
     }
 
     ul {
-        display: grid;
-        grid-template-columns: repeat(3, 348px);
-        column-gap: 48px;
-
-        margin: 0 calc((100% - 1100px) * 0.5);
 
         li {
             background-color: #000000;
@@ -263,17 +259,15 @@ header {
 
 #second {
     display: flex;
-    flex-flow: row nowrap;
-    margin: 0 calc((100% - 1140px) * 0.5);
-    padding: 80px 0;
+    flex-flow: row wrap;
+    padding: 50px 0;
 
     img {
-        width: 80%;
+        width: 100%;
         height: auto;
     }
 
     .text {
-        margin-left: 48px;
 
         span {
             font-family: 'Georgia';
@@ -296,9 +290,9 @@ header {
 
         .link {
             a {
+                margin: 10px 0;
                 padding: 8px 15px;
                 border-radius: 10px;
-                margin-right: 40px;
                 @include cuz-text(15.4px, #ffffff, none);
             }
 
@@ -337,18 +331,12 @@ header {
         }
     }
 
-    .photo {
-        a {
-            margin: 0 25px;
-        }
-    }
 }
 
 #team {
     text-align: center;
-    padding: 80px 0;
-    max-width: 1140px;
     margin: 0 auto;
+    padding: 50px 0;
 
     .text {
         span {
@@ -364,10 +352,11 @@ header {
     }
 
     .photo-team {
-        display: flex;
-        flex-flow: row nowrap;
 
         li {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
 
             img {
                 border-radius: 50%;
@@ -391,12 +380,7 @@ footer {
 
     .subscribe {
         background-color: #50C6C6;
-        padding: 30px calc((100% - 1140px) * 0.5);
-
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-
+        padding: 30px 20px;
 
         .text {
             display: flex;
@@ -421,11 +405,10 @@ footer {
             align-items: center;
 
             input {
-
                 width: 360px;
-                height: 50px;
                 border-radius: 10px;
                 border: 0;
+                height: 3em;
 
                 &:focus {
                     border: 0;
@@ -433,13 +416,10 @@ footer {
             }
 
             a {
-                display: flex;
-                align-items: center;
-                margin-left: 30px;
-                height: 50px;
                 background-color: #287B7B;
                 border-radius: 10px;
-                padding: 11px 30px;
+                text-align: center;
+                padding: 10px 0;
                 @include cuz-text(22px, #50C6C6, uppercase);
 
                 &:hover {
@@ -450,4 +430,54 @@ footer {
         }
     }
 
+}
+
+// responsive
+.row {
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    --column: 4;
+}
+
+[class*="col-"] {
+    --width: 4;
+    --initialbasis: calc(var(--width, 0) / var(--column, 4) * 100%);
+    --gap: calc((var(--column) - var(--width)) * 1%);
+    flex-basis: calc(var(--initialbasis) - var(--gap));
+}
+
+
+@media only screen and (min-width: 480px) {
+    [class*="col-"] {
+        margin-left: 4%;
+        margin-right: 0%;
+    }
+
+    .col-1-2,
+    .col-2,
+    .col-3-6 {
+        flex: 0 0 44%;
+    }
+
+    .col-3 {
+        flex: 0 0 28%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .container {max-width: 1140px;}
+    .col-1-2 {
+        flex: 0 0 20%;
+    }
+
+    .col-2 {
+        flex: 0 0 44%;
+    }
+
+    .col-3-6 {
+        flex: 0 0 12%;
+    }
 }
