@@ -32,9 +32,11 @@ header {
     justify-content: space-between;
     align-items: center;
 
+
     .logo {
 
         span {
+            font-family: 'Georgia';
             @include cuz-text(32px, #777777, uppercase);
         }
 
@@ -46,18 +48,42 @@ header {
     nav ul {
         display: flex;
         flex-flow: row nowrap;
+        margin: 0;
+        padding: 0;
 
         li {
-            display: block;
-            padding: 40px 20px;
 
             a {
+                border-top: 3px solid #F3F3F5;
+
+                position: relative;
+                display: inline-block;
+                padding: 40px 20px;
+
                 @include cuz-text(14px, #777777, uppercase);
+
+                &:hover {
+                    border-top: 3px solid #50C6C6;
+                    background-color: #FCFCFE;
+
+                    &::before {
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        width: 0;
+                        height: 0;
+                        border: solid;
+                        border-width: 4px 2px 2px 2px;
+                        border-color: transparent;
+                        border-top-color: #50C6C6;
+                        content: "";
+                    }
+                }
             }
 
-            &:hover {
-                border-top: 3px solid #50C6C6;
-                background-color: #FCFCFE;
+            .face-border {
+                border-top: 3px solid #F3F3F5;
+                align-self: stretch;
             }
 
         }
@@ -172,6 +198,7 @@ header {
     .text {
 
         span {
+            font-family: 'Georgia';
             @include cuz-text(46px, #FFFFFF, none);
             padding-top: 30px;
         }
@@ -245,6 +272,7 @@ header {
         margin-left: 48px;
 
         span {
+            font-family: 'Georgia';
             @include cuz-text(46px, #777777, none);
         }
 
@@ -289,6 +317,7 @@ header {
 
     .text {
         span {
+            font-family: 'Georgia';
             @include cuz-text(46px, #777777, none);
             margin-bottom: 30px;
         }
@@ -319,6 +348,7 @@ header {
 
     .text {
         span {
+            font-family: 'Georgia';
             @include cuz-text(46px, #777777, none);
         }
 
@@ -363,13 +393,31 @@ footer {
         flex-flow: row nowrap;
         justify-content: space-between;
 
-        span {
-            @include cuz-text(32px, #ffffff, none)
+
+        .text {
+            display: flex;
+            align-items: center;
+
+            i {
+                margin-right: 30px;
+                font-size: 3em;
+                color: #287B7B;
+            }
+
+            span {
+                font-family: 'Georgia';
+                @include cuz-text(32px, #ffffff, none)
+            }
         }
 
+
+
         .input {
+            display: flex;
+            align-items: center;
 
             input {
+
                 width: 360px;
                 height: 50px;
                 border-radius: 10px;
@@ -381,6 +429,9 @@ footer {
             }
 
             a {
+                display: flex;
+                align-items: center;
+                margin-left: 30px;
                 height: 50px;
                 background-color: #287B7B;
                 border-radius: 10px;

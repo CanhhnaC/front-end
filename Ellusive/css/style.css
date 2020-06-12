@@ -39,6 +39,7 @@ header {
 }
 
 header .logo span {
+  font-family: 'Georgia';
   font-size: 32px;
   color: #777777;
   text-transform: uppercase;
@@ -58,22 +59,43 @@ header nav ul {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-}
-
-header nav ul li {
-  display: block;
-  padding: 40px 20px;
+  margin: 0;
+  padding: 0;
 }
 
 header nav ul li a {
+  border-top: 3px solid #F3F3F5;
+  position: relative;
+  display: inline-block;
+  padding: 40px 20px;
   font-size: 14px;
   color: #777777;
   text-transform: uppercase;
 }
 
-header nav ul li:hover {
+header nav ul li a:hover {
   border-top: 3px solid #50C6C6;
   background-color: #FCFCFE;
+}
+
+header nav ul li a:hover::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: solid;
+  border-width: 4px 2px 2px 2px;
+  border-color: transparent;
+  border-top-color: #50C6C6;
+  content: "";
+}
+
+header nav ul li .face-border {
+  border-top: 3px solid #F3F3F5;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
 }
 
 #sidebar {
@@ -203,6 +225,7 @@ header nav ul li:hover {
 }
 
 #home-page .text span {
+  font-family: 'Georgia';
   font-size: 46px;
   color: #FFFFFF;
   text-transform: none;
@@ -293,6 +316,7 @@ header nav ul li:hover {
 }
 
 #second .text span {
+  font-family: 'Georgia';
   font-size: 46px;
   color: #777777;
   text-transform: none;
@@ -340,6 +364,7 @@ header nav ul li:hover {
 }
 
 #logo .text span {
+  font-family: 'Georgia';
   font-size: 46px;
   color: #777777;
   text-transform: none;
@@ -370,6 +395,7 @@ header nav ul li:hover {
 }
 
 #team .text span {
+  font-family: 'Georgia';
   font-size: 46px;
   color: #777777;
   text-transform: none;
@@ -427,10 +453,35 @@ footer .subscribe {
           justify-content: space-between;
 }
 
-footer .subscribe span {
+footer .subscribe .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .subscribe .text i {
+  margin-right: 30px;
+  font-size: 3em;
+  color: #287B7B;
+}
+
+footer .subscribe .text span {
+  font-family: 'Georgia';
   font-size: 32px;
   color: #ffffff;
   text-transform: none;
+}
+
+footer .subscribe .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 footer .subscribe .input input {
@@ -445,6 +496,13 @@ footer .subscribe .input input:focus {
 }
 
 footer .subscribe .input a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 30px;
   height: 50px;
   background-color: #287B7B;
   border-radius: 10px;
