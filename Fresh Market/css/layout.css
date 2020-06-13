@@ -1,0 +1,75 @@
+/* Using flex */
+/* Mobile First */
+
+#weekly-deals ul,
+#grab ul,
+#feature {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    --column: 4;
+}
+
+#weekly-deals ul li,
+#grab ul li,
+#feature article {
+    --width: 4;
+    --gap-constant: 0.3%;
+    --initialbasis: calc(var(--width, 0) / var(--column, 12) * 100%);
+    --gap: calc((var(--column, 12) - var(--width, 0)) * var(--gap-constant, 0.3%));
+    flex-basis: calc(var(--initialbasis) - var(--gap));
+}
+
+#weekly-deals ul li {
+    --width: 4;
+    --gap-constant: .3%;
+}
+
+#grab ul li {
+    --column: 8;
+    --width: 8;
+    --gap-constant: .3%;
+}
+
+#feature {
+    --column: 3;
+}
+
+#feature article {
+    --width: 3;
+    --gap-constant: .3%;
+}
+
+@media (max-width: 739px) {
+    img {
+        max-width: 300px;
+    }
+}
+
+
+/* tablet display */
+@media (min-width: 740px) {
+
+    #weekly-deals ul li
+{
+        --width: 2;
+    }
+    #grab ul li {
+        --width: 4;
+    }
+
+    #feature article {
+        --width: 1;
+    }
+}
+
+/* Desktop display */
+@media (min-width: 1025px) {
+    #weekly-deals ul li {
+        --width: 1;
+    }
+
+    #grab ul li {
+        --width: 2;
+    }
+}

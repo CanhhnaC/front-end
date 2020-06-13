@@ -6,7 +6,6 @@ $bg-color: #FBF9F1;
     color: $color;
     font-size: $size;
     font-weight: $weight;
-
 }
 
 
@@ -20,13 +19,12 @@ $bg-color: #FBF9F1;
 }
 
 body {
-    font-family: Helvetica, sans-serif;
+    font-family: helvetica, sans-serif;
     background-color: $bg-color;
 }
 
 .container {
-    padding-left: 90px;
-    padding-right: 90px;
+
     margin: 0 auto;
     max-width: 1110px;
 }
@@ -57,7 +55,7 @@ header {
         span {
             align-self: flex-end;
             padding-left: 20px;
-            @include cuz-text(25px, bold, $text-color, none)
+            // @include cuz-text(25px, bold, $text-color, none);
         }
     }
 
@@ -101,14 +99,80 @@ header {
         justify-content: space-between;
         max-width: 400px;
         width: 100%;
+        text-transform: uppercase;
+    }
+}
+
+#weekly-deals {
+    padding: 50px 0;
+    border-bottom: 1px solid black;
+
+    &>div {
+        padding: 30px 0;
+    }
+
+    ul li .img {
+        position: relative;
+
+        &::before {
+            padding-top: calc(100%);
+            content: "";
+            display: block;
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: auto;
+        }
 
         span {
-            @include cuz-text(50px, bold, $text-color, uppercase);
-            padding-bottom: 25px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px;
+            background-color: $text-color;
+            color: white;
+        }
+    }
+}
+
+#grab {
+    margin-top: 50px;
+    padding: 50px 0;
+    background-color: white;
+
+    ul li .img {
+        span {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+#feature {
+    margin: 50px auto;
+
+    article {
+        display: grid;
+        grid-template-rows: 63px min-content 1fr;
+        justify-items: center;
+        align-items: center;
+
+        span {
+            padding: 15px 0;
         }
 
         p {
-            @include cuz-text(50px, lighter, $text-color, uppercase);
+            padding: 10px 30px;
         }
     }
 }
