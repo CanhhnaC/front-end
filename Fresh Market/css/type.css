@@ -44,6 +44,9 @@
 
 p, .p {
     font-size: var(--base-size);
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+
 }
 
 small,
@@ -78,9 +81,12 @@ small,
 
 /* Customize */
 
+/* Color text */
 .txt-green {
     color: var(--text-color);
 }
+
+.txt-white { color: white; }
 
 .txt-bold {
     font-weight: bold;
@@ -89,3 +95,4 @@ small,
 .txt-center {
     text-align: center;
 }
+

@@ -1,3 +1,7 @@
+ul {
+  list-style: none;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -9,7 +13,7 @@
 
 body {
   font-family: helvetica, sans-serif;
-  background-color: #FBF9F1;
+  background-color: #fbf9f1;
 }
 
 .container {
@@ -22,7 +26,7 @@ a {
 }
 
 header {
-  background-color: #FBF9F1;
+  background-color: #fbf9f1;
   padding: 45px 0;
   overflow: hidden;
   position: fixed;
@@ -125,14 +129,40 @@ header nav ul li a.activate, header nav ul li a:hover {
   top: 0;
   left: 0;
   padding: 10px;
-  background-color: #2A6049;
+  background-color: #2a6049;
   color: white;
+}
+
+#weekly-deals ul li figure a {
+  padding: 8px 16px;
+  border: 1px solid black;
+  color: black;
+}
+
+#weekly-deals ul li figure a:hover {
+  color: rgba(25, 25, 25, 0.7);
+  transition: 0.5s ease-out;
 }
 
 #grab {
   margin-top: 50px;
   padding: 50px 0;
   background-color: white;
+}
+
+#grab ul li {
+  margin-bottom: 10px;
+}
+
+#grab ul li a {
+  padding: 8px 16px;
+  border: 1px solid black;
+  color: black;
+}
+
+#grab ul li a:hover {
+  color: rgba(25, 25, 25, 0.7);
+  transition: 0.5s ease-out;
 }
 
 #grab ul li .img span {
@@ -161,4 +191,10 @@ header nav ul li a.activate, header nav ul li a:hover {
 
 #feature article p {
   padding: 10px 30px;
+}
+
+footer {
+  background-color: #2a6049;
+  color: white;
+  padding: 50px;
 }

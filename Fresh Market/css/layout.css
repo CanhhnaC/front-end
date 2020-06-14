@@ -3,7 +3,8 @@
 
 #weekly-deals ul,
 #grab ul,
-#feature {
+#feature,
+#copyright {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
