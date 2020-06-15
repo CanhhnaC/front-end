@@ -1,0 +1,107 @@
+header,
+header nav ul,
+#services ul,
+#home-page ul,
+#second div,
+#logo .photo,
+#team ul {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    align-items: center;
+    margin: 0 auto;
+    --column: 4;
+}
+
+#services ul li,
+#home-page ul li,
+#second div article,
+#logo .photo a,
+#team ul li {
+    --width: 4;
+    --gap-constant: 3%;
+    --initialbasis: calc(var(--width, 0) / var(--column, 12) * 100%);
+    --gap: calc((var(--column, 12) - var(--width, 0)) * var(--gap-constant, .3%));
+    flex-basis: calc(var(--initialbasis) - var(--gap));
+}
+
+/* Home page */
+#home-page ul,
+#home-page ul li {
+    --column: 3;
+    --width: 3;
+}
+
+/* Second */
+#second div,
+#second div article {
+    --column: 2;
+    --width: 2;
+}
+
+/* Team */
+#team ul,
+#team ul li {
+    --column: 6;
+    --width: 6;
+}
+
+/* Sidebar */
+#sidebar .text {
+    display: none;
+}
+
+/* md display */
+@media (min-width: 740px) {
+
+    #sidebar .text {
+        display: block;
+    }
+
+    #services ul li,
+    #logo .photo a {
+        --width: 2;
+        --gap-constant: 2%;
+    }
+
+    #home-page ul li {
+        --width: 1;
+        --gap-constant: 2%;
+    }
+
+    #team ul li {
+        --width: 3;
+        --gap-constant: 2%;
+    }
+
+}
+
+/* lg display */
+@media (min-width: 950px) {
+
+    #services ul li,
+    #logo .photo a {
+        --width: 1;
+        --gap-constant: 1%;
+    }
+
+    #second div article {
+        --width: 1;
+        --gap-constant: 1%
+    }
+
+    #team ul li {
+        --width: 2;
+        --gap-constant: 1%;
+    }
+
+}
+
+/* xl display */
+@media (min-width: 1200px) {
+    #team ul li {
+        --width: 1;
+        --gap-constant: 1%;
+    }
+
+}

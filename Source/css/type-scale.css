@@ -1,11 +1,3 @@
-@font-face {
-    font-family: 'helvetica';
-    src: url('/Source/fonts/helvetica_400-webfont.woff2') format('woff2'),
-        url('/Source/fonts/helvetica_400-webfont.woff2') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 :root {
     /* Font size */
     --base-size: 1rem;
@@ -17,32 +9,34 @@
     --h2: calc(var(--h3) * var(--type-scale));
     --h1: calc(var(--h2) * var(--type-scale));
     --text-sm: calc(var(--base-size) / var(--type-scale));
-
-    /* Text color */
-    --text-color:  #2A6049;
 }
 
-.h1 {
+h1, .h1 {
     font-size: var(--h1);
 }
 
-.h2 {
+h2, .h2 {
     font-size: var(--h2);
 }
 
-.h3 {
+h3, .h3 {
     font-size: var(--h3);
 }
-.h4 {
+
+h4, .h4 {
     font-size: var(--h4);
-}.h5 {
+}
+
+h5, .h5 {
     font-size: var(--h5);
 }
-.h6 {
+
+h6, .h6 {
     font-size: var(--h6);
 }
 
-p, .p {
+p,
+.p {
     font-size: var(--base-size);
     margin-bottom: 1.5rem;
     margin-top: 1.5rem;
@@ -54,7 +48,8 @@ small,
     font-size: var(--text-sm);
 }
 
-@media (min-width: 480px) {
+
+@media (min-width: 425px) {
     :root {
         --type-scale: 1.125;
     }
@@ -62,37 +57,18 @@ small,
 
 @media (min-width: 768px) {
     :root {
-        --type-scale: 1.25;
+        --type-scale: 1.2;
     }
 }
 
-@media (min-width: 950px) {
+@media (min-width: 1024px) {
     :root {
-        --type-scale: 1.33;
+        --type-scale: 1.250;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
     :root {
-        --type-scale: 1.414;
+        --type-scale: 1.333;
     }
 }
-
-
-/* Customize */
-
-/* Color text */
-.txt-green {
-    color: var(--text-color);
-}
-
-.txt-white { color: white; }
-
-.txt-bold {
-    font-weight: bold;
-}
-
-.txt-center {
-    text-align: center;
-}
-
