@@ -1,0 +1,74 @@
+{
+    // Style Code
+    "workbench.iconTheme": "vscode-icons",
+    "editor.suggestSelection": "first",
+    // Code Runner
+    "code-runner.runInTerminal": true,
+    "code-runner.executorMap": {
+        "cpp": "g++ $fullFileName && ./a.exe"
+    },
+    // File Exclude
+    "files.exclude": {
+        ".vscode/": true,
+        "venv/": true,
+        "**/__pycache__": true,
+        "**/*.pyc": true
+    },
+    // Explorer 
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    // Language
+    // Python
+    "python.linting.flake8Args": [
+        "--max-line-length=240",
+        "--ignore=E402,F841,F401,E302,E305",
+    ],
+    "python.jediEnabled": false,
+    "workbench.activityBar.visible": false,
+    // Breadcrumbs
+    "breadcrumbs.enabled": false,
+    // Code Formatter
+    "editor.minimap.enabled": false,
+    "[html]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    // Live Sever
+    "liveServer.settings.donotShowInfoMsg": true,
+    // cSpell
+    "cSpell.language": "en, lorem",
+    "cSpell.userWords": [
+        "Ellusive",
+        "Xanpon",
+        "avenir",
+        "domainname",
+        "extralight",
+        "initialbasis",
+        "plusone",
+        "semibold",
+        "webp",
+        "youtube"
+    ],
+    // Live Sass
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "~/../css/"
+        }
+    ],
+    "liveSassCompile.settings.showOutputWindow": false,
+    "liveServer.settings.donotVerifyTags": true,
+
+    
+    // Compile Hero
+    "compile-hero": {
+        "scss-output-directory": "../css",
+    },
+    "workbench.colorTheme": "Night Owl"
+}

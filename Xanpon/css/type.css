@@ -37,6 +37,7 @@ h5, .h5 {
 
 h6, .h6 {
     font-size: var(--h6);
+    padding-bottom: var(--h6);
 }
 
 p,
@@ -90,3 +91,7 @@ small,
     font-weight: normal;
     font-style: normal;
 }
+
+.ver {font-family: 'Verdana';}
+.geo {font-family: 'Georgia';}
+.txt-center {text-align: center;}

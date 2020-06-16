@@ -1,0 +1,92 @@
+header div,
+header ul,
+#top .first div,
+#top .first nav ul,
+.content-first div,
+.content-first ul,
+.content-third ul {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    align-items: center;
+    --column: 2;
+}
+
+#top .second ul {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* column */
+header div article,
+header ul,
+.content-first div,
+.content-first ul,
+.content-first ul li,
+.content-third ul li {
+    --width: 2;
+    --gap-constant: 3%;
+    --initialbasis: calc(var(--width, 0) / var(--column, 12) * 100%);
+    --gap: calc((var(--column, 12) - var(--width, 0)) * var(--gap-constant, .3%));
+    flex-basis: calc(var(--initialbasis) - var(--gap));
+}
+
+/* Header */
+header div article,
+header ul {
+    text-align: center;
+    justify-content: center;
+}
+header div article {
+    margin-bottom: 20px;
+}
+
+/* Content third */
+.content-third ul,
+.content-third ul li {
+    --column: 4;
+    --width: 4;
+    margin-bottom: 50px;
+}
+
+
+@media (min-width: 740px) {
+
+    /* Header */
+    header div article {
+        margin-bottom: 0px;
+    }
+
+    header ul,
+    header div article {
+        justify-content: flex-end;
+        text-align: start;
+        --width: 1;
+    }
+
+
+    /* Content first */
+    .content-first div,
+    .content-first ul,
+    .content-first ul li {
+        --width: 1;
+    }
+
+    /* Content third */
+    .content-third ul li {
+        --gap-constant: 2%;
+        --width: 2;
+    }
+
+}
+
+@media (min-width: 950px) {
+    .content-third ul li {
+        --width: 1;
+        --gap-constant: 1%;
+
+    }
+}
+
+@media (min-width: 1200px) {}
