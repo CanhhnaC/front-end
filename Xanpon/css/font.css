@@ -1,17 +1,92 @@
+/* Define font size (Type Scale) */
+
+:root {
+    /* Font size */
+    --base-size: 14px;
+    --type-scale: 1.33;
+    --h6: calc(var(--base-size) * var(--type-scale));
+    --h5: calc(var(--h6) * var(--type-scale));
+    --h4: calc(var(--h5) * var(--type-scale));
+    --h3: calc(var(--h4) * var(--type-scale));
+    --h2: calc(var(--h3) * var(--type-scale));
+    --h1: calc(var(--h2) * var(--type-scale));
+    --text-sm: calc(var(--base-size) / var(--type-scale));
+
+    --text-primary: #777777;
+}
+
+h1, .h1 {
+    font-size: var(--h1);
+}
+
+h2, .h2 {
+    font-size: var(--h2);
+}
+
+h3, .h3 {
+    font-size: var(--h3);
+}
+
+h4, .h4 {
+    font-size: var(--h4);
+}
+
+h5, .h5 {
+    font-size: var(--h5);
+}
+
+h6, .h6 {
+    font-size: var(--h6);
+}
+
+p,
+.p {
+    font-size: var(--base-size);
+}
+
+small,
+.text-small {
+    font-size: var(--text-sm);
+}
+
+
+@media (min-width: 425px) {
+    :root {
+        --type-scale: 1.125;
+    }
+}
+
+@media (min-width: 768px) {
+    :root {
+        --type-scale: 1.2;
+    }
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --type-scale: 1.250;
+    }
+}
+
+@media (min-width: 1440px) {
+    :root {
+        --type-scale: 1.333;
+    }
+}
+
+/* Font Family */
 @font-face {
     font-family: 'Georgia';
-    src: url('/!!Source/fonts/georgia.woff')format('woff');
-
+    src: url('/Source/fonts/georgia/georgia-webfont.woff')format('woff'),
+        url('/Source/fonts/georgia/georgia-webfont.woff2')format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Verdana";
-
-    src: url("/!!Source/fonts/verdana.woff") format("woff"),
-        url("/!!Source/fonts/verdana.woff2") format("woff2");
-
+    src: url("/Source/fonts/verdana/verdana.woff") format("woff"),
+        url("/Source/fonts/verdana/verdana.woff") format("woff2");
     font-weight: normal;
     font-style: normal;
 }
