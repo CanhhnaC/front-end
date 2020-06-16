@@ -4,12 +4,12 @@ header nav ul,
 #home-page ul,
 #second div,
 #logo .photo,
-#team ul {
+#team ul,
+#subscribe div {
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
     align-items: center;
-    margin: 0 auto;
     --column: 4;
 }
 
@@ -17,7 +17,8 @@ header nav ul,
 #home-page ul li,
 #second div article,
 #logo .photo a,
-#team ul li {
+#team ul li,
+#subscribe article {
     --width: 4;
     --gap-constant: 3%;
     --initialbasis: calc(var(--width, 0) / var(--column, 12) * 100%);
@@ -32,9 +33,11 @@ header nav ul,
     --width: 3;
 }
 
-/* Second */
+/* Second + Subscribe */
 #second div,
-#second div article {
+#second div article,
+#subscribe,
+#subscribe article {
     --column: 2;
     --width: 2;
 }
@@ -85,7 +88,8 @@ header nav ul,
         --gap-constant: 1%;
     }
 
-    #second div article {
+    #second div article,
+    #subscribe article {
         --width: 1;
         --gap-constant: 1%
     }
@@ -101,7 +105,7 @@ header nav ul,
 @media (min-width: 1200px) {
     #team ul li {
         --width: 1;
-        --gap-constant: 1%;
+        --gap-constant: .3%;
     }
 
 }
