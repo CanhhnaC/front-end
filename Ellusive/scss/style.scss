@@ -48,7 +48,7 @@ header nav ul li {
             border-color: transparent;
             border-top-color: $color-blue;
             content: "";
-            background-color: red;
+            background-color: $color-blue;
         }
     }
 
@@ -56,12 +56,20 @@ header nav ul li {
 
 
 #sidebar {
-    position: relative;
+    position: relative;    
 
-    .banner img {
-        max-width: 100%;
-        height: auto;
+    .banner
+    {
+
+        
+        img:not(:first-child) {
+            display: none;
+            max-width: 100%;
+             height: 542px;
+        }
     }
+    
+
 
     .text {
         position: absolute;

@@ -6,11 +6,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="/Source/css/reset.css">
     <link rel="stylesheet" href="/Source/icons/css/all.min.css">
+    <link rel="stylesheet" href="/Source/css/hamburgers.css">
     <link rel="stylesheet" href="css/type.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
 
     <title>Ellusive</title>
 </head>
@@ -18,13 +44,16 @@
 <body>
 
     <header class="container">
-        <section class="logo">
-            <p class="h3 txt-upper">ellusive</p>
-            <small>Premium Website Template</small>
+
+        <section>
+            <div class="logo">
+                <p class="h3 txt-upper">ellusive</p>
+                <small>Premium Website Template</small>
+            </div>
         </section>
 
         <nav>
-            <ul class="txt-upper color-pri">
+            <ul>
                 <li><a href="" class="activate">Home</a></li>
                 <li><a href="">Page</a></li>
                 <li><a href="">Elements</a></li>
@@ -33,6 +62,7 @@
                 <li class="fake-border"></li>
             </ul>
         </nav>
+
     </header>
 
     <main>
@@ -40,8 +70,13 @@
         <!-- Sidebar  -->
         <section id="sidebar">
 
-            <article class="banner">
-                <img src="img/slider-1.jpg" alt="">
+            <article class="banner" style="height: 542px;">
+                <img class="mySlides" src="img/slider-1.jpg" alt="">
+                <img class="mySlides" src="img/slider-2.jpg" alt="">
+                <img class="mySlides" src="img/slider-3.jpg" alt="">
+
+                <button onclick="plusDivs(-1)"><i class="fas fa-angle-left"></i></button>
+                <button onclick="plusDivs(-1)"><i class="fas fa-angle-right"></i></button>
             </article>
 
             <article class="text">
