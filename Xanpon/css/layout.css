@@ -29,11 +29,11 @@ header ul,
 .content-first ul li,
 .content-third ul li,
 #team ul li,
-#fourth article {
+#fourth div article {
     --width: 2;
     --gap-constant: 3%;
     --initialbasis: calc(var(--width, 0) / var(--column, 12) * 100%);
-    --gap: calc((var(--column, 12) - var(--width, 0)) * var(--gap-constant, .3%));
+    --gap: calc((var(--column, 2) - var(--width, 0)) * var(--gap-constant, .3%));
     flex-basis: calc(var(--initialbasis) - var(--gap));
 }
 

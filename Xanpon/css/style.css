@@ -188,10 +188,13 @@ header ul li a {
 
 #team ul li:not(:first-child) a {
   margin-bottom: 20px;
+}
+
+.image {
   position: relative;
 }
 
-#team ul li:not(:first-child) a:hover::before {
+.image:hover::before {
   content: "";
   background-color: rgba(58, 147, 243, 0.3);
   opacity: 1;
@@ -202,7 +205,7 @@ header ul li a {
   position: absolute;
 }
 
-#team ul li:not(:first-child) a:hover::after {
+.image:hover::after {
   content: "+";
   color: white;
   font-size: 2rem;
@@ -212,4 +215,8 @@ header ul li a {
   left: 0;
   right: 0;
   transform: translateY(-50%);
+}
+
+#fourth {
+  margin: 80px 0;
 }
