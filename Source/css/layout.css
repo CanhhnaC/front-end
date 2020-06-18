@@ -18,10 +18,22 @@
 }
 
 /* md display */
-@media (min-width: 740px) {}
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
 
 /* lg display */
-@media (min-width: 950px) {}
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
 
 /* xl display */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}

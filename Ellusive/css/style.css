@@ -42,6 +42,7 @@ header nav ul li .activate::before {
   border-color: transparent;
   border-top-color: #50c6c6;
   content: "";
+  background-color: red;
 }
 
 #sidebar {

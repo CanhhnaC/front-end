@@ -155,3 +155,61 @@ header ul li a {
   color: white;
   background-color: #3A93F3;
 }
+
+#team {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/background-02.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  padding: 80px 0;
+}
+
+#team article {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+#team article h5 {
+  padding-top: .5em;
+}
+
+#team img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+#team ul li:not(:first-child) {
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+}
+
+#team ul li:not(:first-child) a {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+#team ul li:not(:first-child) a:hover::before {
+  content: "";
+  background-color: rgba(58, 147, 243, 0.3);
+  opacity: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+
+#team ul li:not(:first-child) a:hover::after {
+  content: "+";
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}

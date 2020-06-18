@@ -16,7 +16,7 @@
 #feature article {
     --width: 4;
     --gap-constant: 0.3%;
-    --initialbasis: calc(var(--width, 0) / var(--column, 12) * 100%);
+    --initialbasis: calc(var(--width, 0) / var(--column, 4) * 100%);
     --gap: calc((var(--column, 12) - var(--width, 0)) * var(--gap-constant, 0.3%));
     flex-basis: calc(var(--initialbasis) - var(--gap));
 }

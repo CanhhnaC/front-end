@@ -4,7 +4,9 @@ header ul,
 #top .first nav ul,
 .content-first div,
 .content-first ul,
-.content-third ul {
+.content-third ul,
+#team ul,
+#fourth div {
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
@@ -25,7 +27,9 @@ header ul,
 .content-first div,
 .content-first ul,
 .content-first ul li,
-.content-third ul li {
+.content-third ul li,
+#team ul li,
+#fourth article {
     --width: 2;
     --gap-constant: 3%;
     --initialbasis: calc(var(--width, 0) / var(--column, 12) * 100%);
@@ -55,6 +59,12 @@ header div article {
     margin-bottom: 50px;
 }
 
+/* team */
+#team ul,
+#team ul li {
+    --column: 4;
+    --width: 4;
+}
 
 
 @media (min-width: 740px) {
@@ -87,6 +97,12 @@ header div article {
         --width: 2;
     }
 
+    /* Team */
+    #team ul li,
+    #fourth div article  {
+        --gap-constant: 1%;
+        --width: 1;
+    }
 }
 
 @media (min-width: 950px) {
