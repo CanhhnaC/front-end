@@ -3,7 +3,6 @@ header nav ul,
 #sideshow div,
 #content .top ul,
 #content .bottom,
-#content .bottom .img,
 #special ul {
     display: flex;
     flex-flow: row wrap;
@@ -15,7 +14,6 @@ header nav ul,
 /* sm display */
 
 #content .bottom div,
-#content .bottom .img img,
 #special ul li {
     --width: 6;
     --gap-constant: .3%;
@@ -40,7 +38,6 @@ header nav ul,
         max-width: 720px;
     }
 
-    #content .bottom .img img,
     #special ul li {
         --width: 3;
     }

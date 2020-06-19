@@ -21,7 +21,7 @@ header nav ul li a {
 }
 
 #sideshow {
-  background-image: url("../img/background.png");
+  background-image: url("/img/background.png");
 }
 
 #sideshow article {
@@ -40,21 +40,27 @@ header nav ul li a {
   border-left: 1px solid gray;
 }
 
+#content .bottom {
+  padding: 40px 0;
+}
+
 #content .bottom div:first-child p {
   padding: 1.5em 0;
 }
 
-#content .bottom .img img {
-  width: 100%;
-  height: auto;
+#content .bottom .img {
+  display: flex;
+  flex-flow: row wrap;
 }
 
-#content .bottom .img img:nth-child(1) {
-  padding-top: 100px;
+#content .bottom .img div {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
 }
 
-#content .bottom .img img:nth-child(4) {
-  padding-bottom: 100px;
+#content .bottom .img div img:nth-child(even) {
+  padding-top: 10px;
 }
 
 #special {
@@ -152,7 +158,7 @@ header nav ul li a {
 }
 
 #clients {
-  background-image: url("../img/background1.png");
+  background-image: url("/img/background1.png");
   text-align: center;
   color: white;
   padding: 100px 0;
