@@ -1,0 +1,83 @@
+:root {
+    /* Font size */
+    --base-size: 1rem;
+    --type-scale: 1.33;
+    --h6: calc(var(--base-size) * var(--type-scale));
+    --h5: calc(var(--h6) * var(--type-scale));
+    --h4: calc(var(--h5) * var(--type-scale));
+    --h3: calc(var(--h4) * var(--type-scale));
+    --h2: calc(var(--h3) * var(--type-scale));
+    --h1: calc(var(--h2) * var(--type-scale));
+    --text-sm: calc(var(--base-size) / var(--type-scale));
+}
+
+h1, .h1 {
+    font-size: var(--h1);
+}
+
+h2, .h2 {
+    font-size: var(--h2);
+}
+
+h3, .h3 {
+    font-size: var(--h3);
+}
+
+h4, .h4 {
+    font-size: var(--h4);
+}
+
+h5, .h5 {
+    font-size: var(--h5);
+}
+
+h6, .h6 {
+    font-size: var(--h6);
+}
+
+p,
+.p {
+    font-size: var(--base-size);
+}
+
+small,
+.text-small {
+    font-size: var(--text-sm);
+}
+
+
+@media (min-width: 425px) {
+    :root {
+        --type-scale: 1.125;
+    }
+}
+
+@media (min-width: 768px) {
+    :root {
+        --type-scale: 1.2;
+    }
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --type-scale: 1.250;
+    }
+}
+
+@media (min-width: 1440px) {
+    :root {
+        --type-scale: 1.333;
+    }
+}
+
+.hel {font-family: Helvetica;}
+.time {font-family: 'Times New Roman', Times, serif;}
+.yell-co {color: #ff9d13;}
+.upper {text-transform: uppercase;}
+.bold {font-weight: bold;}
+.btn {
+    padding: 8px 15px;
+    color: white;
+    background-color: #ff9d13;
+    border-radius: 5px;
+}
