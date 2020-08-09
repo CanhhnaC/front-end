@@ -81,3 +81,7 @@ small,
     background-color: #ff9d13;
     border-radius: 5px;
 }
+
+.btn:hover {
+    background-color: #eb9011;
+}

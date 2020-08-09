@@ -20,6 +20,10 @@ header nav ul li a {
   font-size: var(--text-sm);
 }
 
+header nav ul li a:hover {
+  color: #ff9d13;
+}
+
 #sideshow {
   background-image: url("../img/background.png");
 }
@@ -94,7 +98,7 @@ header nav ul li a {
 
 #special ul li .text > span {
   display: block;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 #special ul li .text > div {
