@@ -23,7 +23,7 @@ header {
 }
 
 #sideshow {
-    background-image: url('/img/background.png');
+    background-image: url('../img/background.png');
 
     article {
         color: white;
@@ -179,7 +179,7 @@ header {
 }
 
 #clients {
-    background-image: url('/img/background1.png');
+    background-image: url('../img/background1.png');
     text-align: center;
     color: white;
     padding: 100px 0;
@@ -187,5 +187,14 @@ header {
     span {
         display: block;
         padding-bottom: 20px;
+    }
+}
+
+#reserve {
+    text-align: center;
+    padding: 80px 0;
+
+    article {
+        margin-top: 20px;
     }
 }

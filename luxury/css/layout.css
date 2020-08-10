@@ -3,7 +3,9 @@ header nav ul,
 #sideshow div,
 #content .top ul,
 #content .bottom,
-#special ul {
+#special ul,
+#reserve article,
+#reserve article .input {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -14,7 +16,9 @@ header nav ul,
 /* sm display */
 
 #content .bottom div,
-#special ul li {
+#special ul li,
+#reserve article>div
+ {
     --width: 6;
     --gap-constant: .3%;
     --initialbasis: calc(var(--width, 0) / var(--column, 12) * 100%);
@@ -38,7 +42,8 @@ header nav ul,
         max-width: 720px;
     }
 
-    #special ul li {
+    #special ul li,
+    #reserve article>div {
         --width: 3;
     }
 
