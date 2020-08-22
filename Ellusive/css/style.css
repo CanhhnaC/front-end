@@ -84,9 +84,16 @@ header nav ul li .activate::before {
 }
 
 #services li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-bottom: 30px;
 }
 
@@ -111,6 +118,7 @@ header nav ul li .activate::before {
 
 #services li i:hover {
   color: #287b7b;
+  -webkit-transition: .5s ease-out;
   transition: .5s ease-out;
   background-color: white;
   border-color: white;
@@ -141,8 +149,13 @@ header nav ul li .activate::before {
 
 #home-page ul li {
   background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 30px;
 }
 
@@ -209,9 +222,16 @@ header nav ul li .activate::before {
 
 #second article div {
   margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
 #second article div a {
@@ -256,9 +276,16 @@ header nav ul li .activate::before {
 }
 
 #team ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 20px;
 }
 
@@ -289,6 +316,8 @@ header nav ul li .activate::before {
 }
 
 #subscribe .form__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -307,3 +336,4 @@ header nav ul li .activate::before {
   width: 30%;
   padding: 0 15px;
 }
+/*# sourceMappingURL=style.css.map */

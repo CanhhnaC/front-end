@@ -11,44 +11,47 @@
     --text-sm: calc(var(--base-size) / var(--type-scale));
 }
 
-h1,
-.h1 {
+h1, .h1 {
     font-size: var(--h1);
 }
 
-h2,
-.h2 {
+h2, .h2 {
     font-size: var(--h2);
 }
 
-h3,
-.h3 {
+h3, .h3 {
     font-size: var(--h3);
 }
 
-h4,
-.h4 {
+h4, .h4 {
     font-size: var(--h4);
 }
 
-h5,
-.h5 {
+h5, .h5 {
     font-size: var(--h5);
 }
 
-h6,
-.h6 {
+h6, .h6 {
     font-size: var(--h6);
 }
 
 p,
 .p {
     font-size: var(--base-size);
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    color: #999999;
+
 }
 
 small,
 .text-small {
     font-size: var(--text-sm);
+}
+
+/* config type text */
+a {
+    text-decoration: none;
 }
 
 
@@ -74,47 +77,4 @@ small,
     :root {
         --type-scale: 1.333;
     }
-}
-
-@font-face {
-    font-family: 'Sintony';
-    src: url('/Source/fonts/Sintony/Sintony-Bold.woff')format('woff'),
-        url('/Source/fonts/Sintony/Sintony-Bold.woff2')format('woff2')
-}
-
-@font-face {
-    font-family: 'PlayfairDisplay';
-    src: url('/Source/fonts/PlayfairDisplay/PlayfairDisplay-Bold.woff')format('woff'),
-        url('/Source/fonts/PlayfairDisplay/PlayfairDisplay-Bold.woff2')format('woff2');
-}
-
-.hel {
-    font-family: 'Sintony';
-}
-
-.time {
-    font-family: 'PlayfairDisplay';
-}
-
-.yell-co {
-    color: #ff9d13;
-}
-
-.upper {
-    text-transform: uppercase;
-}
-
-.bold {
-    font-weight: bold;
-}
-
-.btn {
-    padding: 8px 15px;
-    color: white;
-    background-color: #ff9d13;
-    border-radius: 5px;
-}
-
-.btn:hover {
-    background-color: #eb9011;
 }
